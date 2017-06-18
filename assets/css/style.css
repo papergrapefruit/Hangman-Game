@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+
+#indexpg {
+    background-image:url('https://media.giphy.com/media/Q9aBxHn9fTqKs/giphy.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+}
+#gamepg {
+    background: url('https://historyundusted.files.wordpress.com/2013/09/matrix-white-rabbit1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .85;
+}
+.center-block {
+  background-color: #666666;
+}
+
+#gametitle{
+  color: darkturquoise;
+}
+h1 {
+  color: #7FFF00;
+  text-align: center;
+}
+
+h2{
+  color: #00BFFF;
+  text-align: right;
+  background-color: black;
+}
+h3{
+  color: #FF4500;
+  background-color: black;
+}
+p{
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 250, 154, 0.72);
+
+}
+
+.well {
+  background-color: black;
+}
+.btn {
+  font-size: 28px;
+  color: gold;
+}
+.btn-red{
+  background-color: red;
+  color: lightblue;
+}
+.btn-blue{
+  background-color: #2251dd;
+  color: #FF4500;
+}
+
+a:hover {
+  color: #0f0;
+}
+a{
+  color: darkturquoise;
+}
+
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    position: absolute;
+    top: 256px;
+    opacity: .6;
+}
+#wordboard {
+  font-family: 'Nova Mono', monospace;
+  font-size: 64px;
+  background-color: rgba(0, 250, 154, 0.72);
+
+}
+
+#FormInput {
+  height: 56px;
+  font-size: 62px;
+  width: 165px;
+  text-align: center;
+  color: tomato;
+}
+::-webkit-input-placeholder {
+ font-size: 40px;
+ vertical-align: -webkit-center;
+}
+.panel {
+  margin: 25px  200px 25px  200px;
+  font-size: 16px;
+}

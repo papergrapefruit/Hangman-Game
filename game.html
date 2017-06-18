@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hangman-Game</title>
+    <!--Bootstrap CDN Link-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Bootstrap United Theme-->
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+    <!--my stylesheet link-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+  </head>
+  <body id="gamepg">
+    <div class = "center-block">
+      <h1 class="display-1" id="gametitle">Guess the word by typing letters!</h1>
+      <p id= "wordboard" class= "text-center">_</p>
+    </div>
+<div class="container">
+    <form class="form-inline">
+      <label class="sr-only" for="inlineFormInput">Guess_Letter</label>
+      <input type="text" maxlength="1" class="form-control" id="FormInput" placeholder="Letter" name="guessinput">
+      <button type="submit" class="btn btn-primary" onclick="testLetter">Guess</button>
+    </div>
+</form>
+<div class="panel panel-danger">
+      <div class="panel-heading">Letters Incorrectly Guessed</div>
+      <div class="panel-body"></div>
+    </div>
+<div class="container">
+    <button type="submit" class="btn btn-default" onclick="location.reload()">New Game</button>
+  </div>
+<!--script-->
+<script type ="text/javascript" src="assets/javascript/game.js">
+</script>
+    </body>
+    </html>
