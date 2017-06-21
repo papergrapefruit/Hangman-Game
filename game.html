@@ -15,23 +15,31 @@
   </head>
   <body id="gamepg">
     <div class = "center-block">
-      <h1 class="display-1" id="gametitle">Guess the word by typing letters!</h1>
-      <p id= "wordboard" class= "text-center">_</p>
+      <h1 class="display-1" id="gametitle">Guess the word!</h1>
+      <h2 id="wordBoard" class= "text-center">- - -</h2>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <p id="lives">Letters used: </p></div>
+            <div class="panel-body">
+              <form class="form-inline" name="guessForm">
+                <div class="form-group">
+                  <label for="howTo">Guess a letter:</label>
+                <input type="text" maxlength="1" class="form-control" id="letterGuess" placeholder="Letter" name="letterGuess">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" onclick="testLetter">Guess</button>
+              </div>
+          </form>
+          </div>
+      </div>
+      <div class="container">
+        <h3 class="text-center">Wins: <span id="wins">0</span></h3>
+    <h3 class="text-center">Guesses remaining: <span id="guesses">8</span></h3>
+      </div>
+        <button type="submit" class="btn btn-default float-right" onclick="location.reload()">New Game</button>
+      </div>
     </div>
-<div class="container">
-    <form class="form-inline">
-      <label class="sr-only" for="inlineFormInput">Guess_Letter</label>
-      <input type="text" maxlength="1" class="form-control" id="FormInput" placeholder="Letter" name="guessinput">
-      <button type="submit" class="btn btn-primary" onclick="testLetter">Guess</button>
-    </div>
-</form>
-<div class="panel panel-danger">
-      <div class="panel-heading">Letters Incorrectly Guessed</div>
-      <div class="panel-body"></div>
-    </div>
-<div class="container">
-    <button type="submit" class="btn btn-default" onclick="location.reload()">New Game</button>
-  </div>
+
 <!--script-->
 <script type ="text/javascript" src="assets/javascript/game.js">
 </script>

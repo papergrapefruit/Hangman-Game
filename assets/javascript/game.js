@@ -1,11 +1,11 @@
 function clickBlue() {
   var enterMatrix = "The answer is out there, Neo. It’s looking for you. And it will find you if you want it to.";
-  alert (enterMatrix);
+    alert(enterMatrix);
 }
 function clickRed() {
   var str = "I'm trying to free your mind, Neo. But I can only show you the door. You're the one that has to walk through it. (click here!)";
-  var result = str.link("game.html");
-  document.getElementById("next").innerHTML = result;
+    var result = str.link("game.html");
+    document.getElementById("next").innerHTML = result;
 }
 var wordAnswers = [
 ["T", "R", "E", "E", "H", "O", "U", "S", "E"],
@@ -14,52 +14,54 @@ var wordAnswers = [
   ["E","D","U","C","A","T","I","O","N"],
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
-]
-var random = Math.floor((Math.random()*(wordAnswers.length-1)));
-console.log(random);
-var wordAnswer = wordAnswers[random];
-console.log(wordAnswer);
-// the word to guess will be chosen from the array above
-var guessWord = new Array(wordAnswer.length);
-console.log(guessWord);
+];
+var wordBoard = document.getElementById("wordBoard");
+var random = Math.floor((Math.random()*(wordAnswers.length)));
+var wordAnswer = wordAnswers[random];// the word to guess will be chosen from the array above
 var misses = 0;
+var guessWord=[];
 
 // every letter in the word is symbolized by an underscore in the guessfield
-for (var i = 0; i < guessWord.length; i++){
-	guessWord[i] = "_ ";
+wordBoard.innerHTML="";
+for (var i = 0; i < wordAnswer.length; i++) {
+  guessWord[i] = "_";
+  wordBoard.innerHTML+=guessWord[i] +"&nbsp; ";
 }
-console.log(guessWord.length);
-console.log(guessWord);
-
 // prints the guessfield
 function printGuessword(){
 	for (var i = 0; i < guessWord.length; i++){
-	var wordBoard = document.getElementById("wordboard");
-	var letter = document.write(guessWord[i]);
-  guessArea.appendChild(letter);
 	}
+printGuessword();
 }
-
 //checks if the the letter provided by the user matches one or more of the letters in the word
-var checkGuess = function(){
-	var f = document.inlineFormInput;
-	var b = f.elements["guessLetter"];
+var testLetter = function(){
+	var f = document.guessForm;
+	var b = f.elements["letterGuess"];
 	var letter = b.value;
+console.log(letterGuess);
   // the letter provided by the user
 	letter = letter.toUpperCase();
-	for (var i = 0; i < word.length; i++){
-		if(word[i] === letter){
+  console.log(letter.toUpperCase);
+	for (var i = 0; i < wordAnswer.length; i++){
+		if(wordAnswer[i] === letter){
 			guessWord[i] = letter + " ";
 			var hit = true;
 		}
 	b.value = "";
 	}
-
-	//deletes the guessfield and replaces it with the new one
-	var guessArea = document.getElementById("inlineFormInput");
-	guessArea.innerHTML="";
-	printGuessword();
-
+  //
+var showLives = document.getElementById("guesses");
+comments = function () {
+   showLives.innerHTML = "You have " + lives + " lives";
+   if (lives < 1) {
+     showLives.innerHTML = "Game Over";
+   }
+   for (var i = 0; i < geusses.length; i++) {
+      if (counter + space === geusses.length) {
+        showLives.innerHTML = "You Win!";
+      }
+    }
+  }
 	// if a guessed letter is not in the word, the letter will be put on the "wrong letters"-list and hangman grows
 	if(!hit){
 		var guessedLetters = document.getElementByClass("panel-body");
